@@ -1,13 +1,13 @@
 import streamlit as st
 from PIL import Image
-from data.data import subject_to_fields, recommendations
+from data import subject_to_fields, recommendations
 
 # Load and apply external CSS
-with open('data/style.css') as f:
+with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style><div class="title">🌟 PathwayPlanner 🌟</div>', unsafe_allow_html=True)
 try:
 
-    image_path = 'data/logo_career_app.png'  # Update this path
+    image_path = 'logo_career_app.png'  # Update this path
     image = Image.open(image_path)
 
     # Resize the image to logo size (e.g., 150x150 pixels) using the updated resampling method
